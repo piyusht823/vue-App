@@ -1,6 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import OptionsvsComposition from './components/OptionsvsComposition.vue';
+import OptionsvsComposition from './components/OptionsvsComposition.vue'
 </script>
 
 <template>

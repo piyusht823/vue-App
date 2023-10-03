@@ -69,7 +69,7 @@ import { onMounted, ref } from 'vue';
       <p v-if="showName">{{ username }}</p>
       <p v-else>{{ Math.random()}}</p>
       <button @click="showName=!showName">Toggle Name</button>
-      <button @click="updateUsername('Pratyush Tiwari')" & v-on:click="changeName=!changeshowName">Update Username</button>
+      <button @click="updateUsername('Pratyush Tiwari')">Update Username</button>
     </div>
 </template>
 
