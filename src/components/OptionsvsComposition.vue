@@ -45,8 +45,10 @@ export default {
 import { onMounted, ref } from 'vue';
 
 
-      const username= ref('Piyush')
-      const isModalShown= ref(false)
+    const username= ref('Piyush')
+    const isModalShown= ref(false)
+    const showName = ref(true)
+    const changeName = ref(false)
 
     function updateUsername(newUsername) {
       username.value = newUsername
@@ -64,25 +66,12 @@ import { onMounted, ref } from 'vue';
 
 <template>
     <div>
-      <p>{{ username }}</p>
-      <p>{{ isModalShown }}</p>
-      <button @click="updateUsername('Pratyush Tiwari')">Update Username</button>
+      <p v-if="showName">{{ username }}</p>
+      <p v-else>{{ Math.random()}}</p>
+      <button @click="showName=!showName">Toggle Name</button>
+      <button @click="updateUsername('Pratyush Tiwari')" & v-on:click="changeName=!changeshowName">Update Username</button>
     </div>
 </template>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
