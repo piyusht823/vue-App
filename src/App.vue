@@ -1,10 +1,12 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import OptionsvsComposition from './components/OptionsvsComposition.vue'
+import vbind from './components/vbind.vue';
 </script>
 
 <template>
-  <OptionsvsComposition/>
+  <vbind/>
+  <!-- <Optionsvscomposition/> -->
 </template>
 
 <style scoped>

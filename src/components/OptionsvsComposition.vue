@@ -42,13 +42,26 @@ export default {
 
 <!-- Compositions API -->
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
 
 
     const username= ref('Piyush')
     const isModalShown= ref(false)
     const showName = ref(true)
     const changeName = ref(false)
+    // const person1 = ref({
+    //   name:"reactive",
+    //   age:23
+    // })
+    // const person2 = reactive({
+    //   name:"reactive",
+    //   age:23
+    // })
+    // const person1 = ref([
+    //   id="reactive",
+    //   age=23
+    // ])
+
 
     function updateUsername(newUsername) {
       username.value = newUsername
@@ -62,10 +75,13 @@ import { onMounted, ref } from 'vue';
         showModal();
     })
 
+    // person1.value = {name:"cha",age:29}
+
 </script>
 
 <template>
     <div>
+      <h3>{{ person1 }}</h3>
       <p v-if="showName">{{ username }}</p>
       <p v-else>{{ Math.random()}}</p>
       <button @click="showName=!showName">Toggle Name</button>
