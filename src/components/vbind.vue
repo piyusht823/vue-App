@@ -9,14 +9,27 @@ import {ref} from 'vue';
     const attr1 = ref('id')
     const attr2 = ref('class')
     const user = ref(0)
+    const cart = ref(['Item','Item'])
+    const persons = ref([{id:1,name:"Piyush",city:"Bhore"},{id:2,name:"Pratyush", city:"Gopalganj"}])
+
+
+    function addItem(){
+        cart.value.push('Item')
+    }
+    function removeItem(){
+        cart.value.pop()
+    }
+
 </script>
 
 <template>
 
-        
+    <!-- variable way of adding -->
     <div :[attr1]="empid" :[attr2]="textcolor" v-html="content" v-show="status"></div>
     <!-- <div :id="empid" :class="textcolor" v-html="content" v-show="status"></div> -->
      
+    
+    <!-- adding removing user -->
     <button v-on:click="user++" v-show="user<10">Add</button>
     <button v-on:click="user--" v-show="user">Remove</button> 
     <h4 v-if="user==0">No users</h4>
@@ -24,6 +37,18 @@ import {ref} from 'vue';
     <h4 v-else>{{ user }} users</h4>
 
 
+    <!-- adding item to cart using v-for looping -->
+    <ol>
+        <li v-for="(item,index) in cart">{{ item }} {{ index +1}}</li>
+    </ol>
+    <button @click="addItem()">Add Item</button>
+    <button @click="removeItem()">Remove Item</button>
+
+
+    <!-- taking data from object type  -->
+    <ul>
+        <li v-for="(person,count) in persons">{{count+1}}:> {{ person.name }} is from {{ person.city }}</li>
+    </ul>
 
 
 </template>
