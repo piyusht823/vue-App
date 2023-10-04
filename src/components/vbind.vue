@@ -11,10 +11,13 @@ import {ref} from 'vue';
     const user = ref(0)
     const cart = ref(['Item','Item'])
     const persons = ref([{id:1,name:"Piyush",city:"Bhore"},{id:2,name:"Pratyush", city:"Gopalganj"}])
+    const product = ref()
+    const item = ref()
+    const countries = ref([]) 
 
 
     function addItem(){
-        cart.value.push('Item')
+        cart.value.push(item.value)
     }
     function removeItem(){
         cart.value.pop()
@@ -41,8 +44,8 @@ import {ref} from 'vue';
     <ol>
         <li v-for="(item,index) in cart">{{ item }} {{ index +1}}</li>
     </ol>
-    <button @click="addItem()">Add Item</button>
-    <button @click="removeItem()">Remove Item</button>
+        <button @click="addItem()">Add Item</button>
+        <button @click="removeItem()">Remove Item</button>
 
 
     <!-- taking data from object type  -->
@@ -51,6 +54,16 @@ import {ref} from 'vue';
     </ul>
 
 
+    <!-- taking input from input tag and putting in second line -->
+    <input type="checkbox" v-model="product"/><br>
+    <div v-if="product">v-if Content</div>
+
+    <!-- selecting countries from lists -->
+    <select v-model="countries" multiple>
+        <option value="IN">India</option>
+        <option value="US">USA</option>
+        <option value="UK">UK</option>
+    </select>{{ countries }}<br>
 </template>
 
 <style>
