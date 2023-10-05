@@ -1,11 +1,15 @@
 <script setup>
+import EmployeeCard from './components/EmployeeCard.vue';
+import Form from './components/Form.vue';
 import HelloWorld from './components/HelloWorld.vue'
 import OptionsvsComposition from './components/OptionsvsComposition.vue'
 import vbind from './components/vbind.vue';
 </script>
 
 <template>
-  <vbind/>
+  <Form/>
+  <!-- <EmployeeCard/> -->
+  <!-- <vbind/> -->
   <!-- <Optionsvscomposition/> -->
 </template>
 

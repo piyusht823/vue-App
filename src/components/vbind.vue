@@ -4,15 +4,16 @@ import {ref} from 'vue';
 
     const empid = ref(10)
     const textcolor = ref('textstyle')
-    const content = ref('<h2>LTIMindtree</h2>')
+    const content = ref('<h2><i>LTIMindtree</i></h2>')
     const status = ref(true)
     const attr1 = ref('id')
     const attr2 = ref('class')
     const user = ref(0)
     const cart = ref(['Item','Item'])
     const persons = ref([{id:1,name:"Piyush",city:"Bhore"},{id:2,name:"Pratyush", city:"Gopalganj"}])
-    const product = ref()
-    const item = ref()
+    const product1 = ref()
+    const product2 = ref()
+    const item = ref('item')
     const countries = ref([]) 
 
 
@@ -55,8 +56,11 @@ import {ref} from 'vue';
 
 
     <!-- taking input from input tag and putting in second line -->
-    <input type="checkbox" v-model="product"/><br>
-    <div v-if="product">v-if Content</div>
+    <input type="text" v-model.lazy="product1"/><br>{{ product1 }}<br>
+
+    <!-- check box -->
+    <input type="checkbox" v-model="product2"/><br>
+    <div v-if="product2">v-if Content</div>
 
     <!-- selecting countries from lists -->
     <select v-model="countries" multiple>
@@ -68,6 +72,6 @@ import {ref} from 'vue';
 
 <style>
     .textstyle{
-        color: red;
+        color: rgb(245, 207, 92);
     }
 </style>
