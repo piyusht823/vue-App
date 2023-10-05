@@ -7,8 +7,8 @@ import vbind from './components/vbind.vue';
 </script>
 
 <template>
-  <Form/>
-  <!-- <EmployeeCard/> -->
+  <!-- <Form/> -->
+  <EmployeeCard/>
   <!-- <vbind/> -->
   <!-- <Optionsvscomposition/> -->
 </template>
@@ -26,4 +26,5 @@ import vbind from './components/vbind.vue';
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+
 </style>
