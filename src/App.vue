@@ -8,9 +8,18 @@ import vbind from './components/vbind.vue';
 
 <template>
   <!-- <Form/> -->
-  <EmployeeCard/>
+  <!-- <EmployeeCard/> -->
   <!-- <vbind/> -->
   <!-- <Optionsvscomposition/> -->
+
+  <div>
+    <router-link :to="{name:'home'}">Home</router-link><br>
+    <router-link :to="{name:'about'}">About</router-link><br>
+    <router-link :to="{name:'contact'}">Contact</router-link><br>
+    <router-link :to="{name:'employee'}">Employee</router-link><br>
+  </div>
+
+  <router-view/>
 </template>
 
 <style scoped>

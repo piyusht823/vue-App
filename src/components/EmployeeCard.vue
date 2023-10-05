@@ -63,11 +63,11 @@
 <style scoped>
   .light-mode {
     background-color: #fff;
-    color: #333;
+    color: rgb(25, 25, 25);
   }
 
   .dark-mode {
-    background-color: #333;
+    background-color: rgb(25, 25, 25);
     color: #fff;
   }
 </style>
