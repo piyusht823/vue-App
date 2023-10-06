@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { ref } from 'vue';
   import { useCartStore } from '../stores/cart'; // Import the Pinia store
   
@@ -44,6 +44,35 @@
         </li>
       </ul>
     </div>
-  </template>
+  </template>-->
+
+
+
+
+  <script setup>
+  import { ref, computed } from 'vue'
+  import { useCartStore } from '../stores/cart';
+  
+  const count = ref(0)
+  
+  const cartStore = useCartStore()
+  
+</script>
+
+
+<template>
+    <div>
+      {{ cartStore.count }}
+    </div>
+    <div>
+      <button v-on:click="incrementCount">+</button>
+      <button v-on:click="decrementCount">-</button>
+    </div>
+  
+    <div>
+      
+    This counter is : {{ cartStore.oddOrEven }}
+    </div>
+  </template>  
   
   
