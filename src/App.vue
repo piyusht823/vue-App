@@ -4,6 +4,7 @@ import Form from './components/Form.vue';
 import HelloWorld from './components/HelloWorld.vue'
 import OptionsvsComposition from './components/OptionsvsComposition.vue'
 import vbind from './components/vbind.vue';
+import task from './components/task.vue';
 </script>
 
 <template>
@@ -12,14 +13,17 @@ import vbind from './components/vbind.vue';
   <!-- <vbind/> -->
   <!-- <Optionsvscomposition/> -->
 
-  <div>
-    <router-link :to="{name:'home'}">Home</router-link><br>
-    <router-link :to="{name:'about'}">About</router-link><br>
-    <router-link :to="{name:'contact'}">Contact</router-link><br>
+  <div style="background-color: rgb(229, 239, 97);">
+    <router-link :to="{name:'home'}">Home</router-link> | 
+    <router-link :to="{name:'about'}">About</router-link> | 
+    <router-link :to="{name:'contact'}">Contact</router-link> | 
     <router-link :to="{name:'employee'}">Employee</router-link><br>
   </div>
 
   <router-view/>
+
+  <task/>
+
 </template>
 
 <style scoped>
