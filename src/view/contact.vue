@@ -3,6 +3,6 @@ import Cart from '../components/cart.vue';
 </script>
 
 <template>
-    <h2>Contact Page</h2>
+    <h2>Contact</h2>
     <Cart/>
 </template>

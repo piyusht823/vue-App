@@ -3,6 +3,7 @@ import './style.css'
 import App from './App.vue'
 
 import {createRouter, createWebHistory} from 'vue-router'
+import {createPinia} from 'pinia'
 import home from './view/home.vue'
 import about from './view/about.vue'
 import contact from './view/contact.vue'
@@ -28,4 +29,8 @@ const router = createRouter({
     routes
 })
 
-createApp(App).use(router).mount('#app')
+const store = createPinia()
+
+createApp(App).use(router).use(store).mount('#app')
+
+

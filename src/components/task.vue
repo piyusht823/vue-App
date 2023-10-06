@@ -23,7 +23,7 @@
     </div>
     <div>
       <button v-on:click="incrementCount">+</button>
-      <button v-on:click="decrementCount">-</button>
+      <button v-on:click="decrementCount" v-show="count>0">-</button>
     </div>
   
     <div>

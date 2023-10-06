@@ -5,6 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import OptionsvsComposition from './components/OptionsvsComposition.vue'
 import vbind from './components/vbind.vue';
 import task from './components/task.vue';
+import cart from './components/cart.vue';
 </script>
 
 <template>
@@ -13,7 +14,7 @@ import task from './components/task.vue';
   <!-- <vbind/> -->
   <!-- <Optionsvscomposition/> -->
 
-  <div style="background-color: rgb(229, 239, 97);">
+  <!-- <div style="background-color: rgb(229, 239, 97);">
     <router-link :to="{name:'home'}">Home</router-link> | 
     <router-link :to="{name:'about'}">About</router-link> | 
     <router-link :to="{name:'contact'}">Contact</router-link> | 
@@ -22,8 +23,9 @@ import task from './components/task.vue';
 
   <router-view/>
 
-  <task/>
+  <task/> -->
 
+  <cart/>
 </template>
 
 <style scoped>
